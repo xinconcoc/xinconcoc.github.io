@@ -27,16 +27,25 @@
       .about-section p {
         text-align: justify;
       }
-      .row {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+      .collapsible {
+        background-color: #f9f9f9;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
       }
-      .about-section {
-        flex: 0 0 48%;
+      .active, .collapsible:hover {
+        background-color: #ccc;
       }
-      .bio-section {
-        flex: 0 0 48%;
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
       }
     </style>
   </head>
@@ -48,9 +57,9 @@
           <div class="site-nav"> 
             <nav role="navigation">
               <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#references" title="References"><span class="menu-title">References</span></a></li>
+                <li class="nav-item"><button class="collapsible">About</button></li>
+                <li class="nav-item"><button class="collapsible">Education</button></li>
+                <li class="nav-item"><button class="collapsible">References</button></li>
               </ul>
             </nav>
           </div>
@@ -60,37 +69,11 @@
     <div class="page-content">
       <div class="container">
         <div class="resume-container">
-          <div class="shadow-1-strong bg-white my-5" id="intro">
-            <div class="bg-info text-white">
-              <div class="cover bg-image"><img src="images/header-background.jpg"/>
-                <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
-                  <div class="text-center p-5">
-                    <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
-                    <div class="header-bio mt-3">
-                      <div data-aos="zoom-in" data-aos-delay="0">
-                        <h2 class="h1">HO TRONG TAI</h2>
-                        <p>Research Engineer</p>
-                      </div>
-                      <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                        <nav role="navigation">
-                          <ul class="nav justify-content-center">
-                            <li class="nav-item"><a class="nav-link" href="mailto:hotai101200@gmail.com" title="Email"><i class="far fa-envelope"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                          </ul>
-                        </nav>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+          <div class="content">
             <h2 class="h2 fw-light mb-4">About Me</h2>
             <p>Hello! I’m HO TRONG TAI. I am passionate about research and technology development. I enjoy creating impactful solutions and collaborating with others to achieve goals. My main areas of interest include machine learning applications and power systems optimization.</p>
           </div>
-          <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+          <div class="content">
             <h2 class="h2 fw-light mb-4">Education</h2>
             <ul>
               <li><strong>PhD Student</strong> - University of Michigan-Dearborn, Department of Electrical and Computer Engineering</li>
@@ -98,7 +81,7 @@
               <li><strong>Bachelor's Degree</strong> - Da Nang University of Science and Technology, Control and Automation</li>
             </ul>
           </div>
-          <div class="shadow-1-strong bg-white my-5 p-5" id="references">
+          <div class="content">
             <h2 class="h2 fw-light mb-4">References</h2>
             <ul>
               <li><strong>Assoc. Prof. Le Tien Dung</strong> - Vice Rector, Da Nang University of Science and Technology</li>
@@ -130,6 +113,21 @@
     </footer>
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
-    <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
