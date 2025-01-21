@@ -66,14 +66,30 @@
         padding-bottom: 5px;
         margin-bottom: 20px;
       }
-      .publication {
+      .section {
+        display: none;
+      }
+      .section.active {
+        display: block;
+      }
+      .tabs {
+        display: flex;
+        justify-content: space-around;
         margin-bottom: 20px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 8px;
       }
-      .publication h3 {
-        margin: 5px 0;
+      .tabs button {
+        border: none;
+        background: none;
+        font-size: 16px;
+        padding: 10px 20px;
+        cursor: pointer;
       }
-      .publication p {
-        margin: 0;
+      .tabs button.active {
+        font-weight: bold;
+        border-bottom: 2px solid #333;
       }
     </style>
   </head>
@@ -94,12 +110,49 @@
 
       <!-- Main Content -->
       <div class="main-content">
-        <h2>Publications</h2>
-        <div class="publication">
-          <h3>2024</h3>
-          <p><strong>Huu-Trong Le</strong>, Chiara Franciosi, Phuc Do, and Alexandre Voisin. "Contribution of Maintenance to Reconfigurable Manufacturing Systems: State of the Art and Challenges." 6th IFAC Workshop on Advanced Maintenance Engineering, Services and Technology AMEST, 58(8), 121-126. <a href="#">[paper]</a></p>
+        <div class="tabs">
+          <button class="tab-button active" data-target="about">About Me</button>
+          <button class="tab-button" data-target="education">Education</button>
+          <button class="tab-button" data-target="references">References</button>
+        </div>
+
+        <div id="about" class="section active">
+          <h2>About Me</h2>
+          <p>Hello! I’m HO TRONG TAI. I am passionate about research and technology development. I enjoy creating impactful solutions and collaborating with others to achieve goals. My main areas of interest include machine learning applications and power systems optimization.</p>
+        </div>
+
+        <div id="education" class="section">
+          <h2>Education</h2>
+          <ul>
+            <li><strong>PhD Student</strong> - University of Michigan-Dearborn, Department of Electrical and Computer Engineering</li>
+            <li><strong>Master's Degree</strong> - Korea National University of Transportation, Computer and Information Engineering</li>
+            <li><strong>Bachelor's Degree</strong> - Da Nang University of Science and Technology, Control and Automation</li>
+          </ul>
+        </div>
+
+        <div id="references" class="section">
+          <h2>References</h2>
+          <ul>
+            <li><strong>Assoc. Prof. Le Tien Dung</strong> - Vice Rector, Da Nang University of Science and Technology</li>
+            <li><strong>Prof. Kim Yonghwa</strong> - Computer and Information Engineering, Korea National University of Transportation</li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <script>
+      const buttons = document.querySelectorAll('.tab-button');
+      const sections = document.querySelectorAll('.section');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('active'));
+          sections.forEach(section => section.classList.remove('active'));
+
+          button.classList.add('active');
+          document.getElementById(button.dataset.target).classList.add('active');
+        });
+      });
+    </script>
   </body>
 </html>
