@@ -3,134 +3,103 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HO TRONG TAI</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
-    </noscript>
-    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/main.css?ver=1.2.1" rel="stylesheet">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
-        }
-      </style>
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"/>
+    <link href="css/font-awesome/css/all.min.css" rel="stylesheet">
     <style>
-      .about-section p {
-        text-align: justify;
-      }
-      .collapsible {
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
         background-color: #f9f9f9;
-        color: #444;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 18px;
+        color: #333;
       }
-      .active, .collapsible:hover {
-        background-color: #ccc;
+      .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
       }
-      .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
+      .sidebar {
+        flex: 1;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
       }
-      #about-section {
+      .main-content {
+        flex: 3;
+        margin-left: 20px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
         display: block;
+      }
+      .sidebar h2 {
+        text-align: center;
+        margin: 10px 0;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+      .sidebar ul li i {
+        margin-right: 10px;
+        color: #555;
+      }
+      .main-content h2 {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+      .publication {
+        margin-bottom: 20px;
+      }
+      .publication h3 {
+        margin: 5px 0;
+      }
+      .publication p {
+        margin: 0;
       }
     </style>
   </head>
-  <body class="bg-light" id="top">
-    <header class="d-print-none">
-      <div class="container text-center text-lg-left">
-        <div class="pt-4 clearfix">
-          <h1 class="site-title mb-0">HO TRONG TAI</h1>
-          <div class="site-nav"> 
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><button class="collapsible">About</button></li>
-                <li class="nav-item"><button class="collapsible">Education</button></li>
-                <li class="nav-item"><button class="collapsible">References</button></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <img src="images/avatar.jpg" alt="HO TRONG TAI" class="profile-pic">
+        <h2>HO TRONG TAI</h2>
+        <p>Research Engineer</p>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i>Korea</li>
+          <li><i class="fas fa-envelope"></i><a href="mailto:hotai101200@gmail.com"> hotai101200@gmail.com</a></li>
+          <li><i class="fas fa-graduation-cap"></i><a href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" target="_blank"> Google Scholar</a></li>
+          <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" target="_blank"> LinkedIn</a></li>
+        </ul>
       </div>
-    </header>
-    <div class="page-content">
-      <div class="container">
-        <div class="resume-container">
-          <div id="about-section">
-            <h2 class="h2 fw-light mb-4">About Me</h2>
-            <p>Hello! I’m HO TRONG TAI. I am passionate about research and technology development. I enjoy creating impactful solutions and collaborating with others to achieve goals. My main areas of interest include machine learning applications and power systems optimization.</p>
-          </div>
-          <div class="content">
-            <h2 class="h2 fw-light mb-4">Education</h2>
-            <ul>
-              <li><strong>PhD Student</strong> - University of Michigan-Dearborn, Department of Electrical and Computer Engineering</li>
-              <li><strong>Master's Degree</strong> - Korea National University of Transportation, Computer and Information Engineering</li>
-              <li><strong>Bachelor's Degree</strong> - Da Nang University of Science and Technology, Control and Automation</li>
-            </ul>
-          </div>
-          <div class="content">
-            <h2 class="h2 fw-light mb-4">References</h2>
-            <ul>
-              <li><strong>Assoc. Prof. Le Tien Dung</strong> - Vice Rector, Da Nang University of Science and Technology</li>
-              <li><strong>Prof. Kim Yonghwa</strong> - Computer and Information Engineering, Korea National University of Transportation</li>
-            </ul>
-          </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h2>Publications</h2>
+        <div class="publication">
+          <h3>2024</h3>
+          <p><strong>Huu-Trong Le</strong>, Chiara Franciosi, Phuc Do, and Alexandre Voisin. "Contribution of Maintenance to Reconfigurable Manufacturing Systems: State of the Art and Challenges." 6th IFAC Workshop on Advanced Maintenance Engineering, Services and Technology AMEST, 58(8), 121-126. <a href="#">[paper]</a></p>
         </div>
       </div>
     </div>
-    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
-      <div class="container">
-        <div class="my-3">
-          <div class="h4">HO TRONG TAI</div>
-          <div class="footer-nav">
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="mailto:hotai101200@gmail.com" title="Email"><i class="far fa-envelope"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="text-small">
-          <div class="mb-1">&copy; HO TRONG TAI. All rights reserved.</div>
-          <div>Design - Custom</div>
-        </div>
-      </div>
-    </footer>
-    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
-    <script src="scripts/aos.js?ver=1.2.1"></script>
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      }
-    </script>
   </body>
 </html>
