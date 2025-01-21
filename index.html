@@ -27,13 +27,16 @@
       .about-section p {
         text-align: justify;
       }
-      .col-md-6 {
-        flex: 0 0 40%;
-        max-width: 40%;
+      .row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
       }
-      .col-md-5 {
-        flex: 0 0 60%;
-        max-width: 60%;
+      .about-section {
+        flex: 0 0 48%;
+      }
+      .bio-section {
+        flex: 0 0 48%;
       }
     </style>
   </head>
@@ -67,87 +70,86 @@
     </header>
     <div class="page-content">
       <div class="container">
-<div class="resume-container">
-  <div class="shadow-1-strong bg-white my-5" id="intro">
-    <div class="bg-info text-white">
-      <div class="cover bg-image"><img src="images/header-background.jpg"/>
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
-          <div class="text-center p-5">
-            <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
-            <div class="header-bio mt-3">
-              <div data-aos="zoom-in" data-aos-delay="0">
-                <h2 class="h1">HO TRONG TAI</h2>
-                <p>Research Engineer</p>
+        <div class="resume-container">
+          <div class="shadow-1-strong bg-white my-5" id="intro">
+            <div class="bg-info text-white">
+              <div class="cover bg-image"><img src="images/header-background.jpg"/>
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);backdrop-filter: blur(2px);">
+                  <div class="text-center p-5">
+                    <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="160" height="160"/></div>
+                    <div class="header-bio mt-3">
+                      <div data-aos="zoom-in" data-aos-delay="0">
+                        <h2 class="h1">HO TRONG TAI</h2>
+                        <p>Research Engineer</p>
+                      </div>
+                      <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                        <nav role="navigation">
+                          <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" title="Google Scholar"><i class="fas fa-graduation-cap"></i><span class="menu-title sr-only">Google Scholar</span></a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                <nav role="navigation">
-                  <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" title="Google Scholar"><i class="fas fa-graduation-cap"></i><span class="menu-title sr-only">Google Scholar</span></a></li>
-                  </ul>
-                </nav>
+            </div>
+          </div>
+          <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+            <div class="row">
+              <div class="about-section">
+                <h2 class="h2 fw-light mb-4">About Me</h2>
+                <p>Hello! I’m HO TRONG TAI. I am passionate about research and technology development. I am skilled in problem-solving and innovative thinking. I enjoy creating impactful solutions that benefit society.</p>
+                <p>I can easily adapt to new environments and deliver high-quality work under tight deadlines.</p>
+              </div>
+              <div class="bio-section">
+                <h2 class="h2 fw-light mb-4">Bio</h2>
+                <div class="row">
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2">hotai101200@gmail.com</div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2">Korea</div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="fas fa-university pe-2 text-muted" style="width:24px;opacity:0.85;"></i> University</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2"><a href="https://www.univ-lorraine.fr/" target="_blank">Université de Lorraine</a></div>
+                    <div class="pb-2"><a href="https://www.ut.ac.kr/" target="_blank">Korea National University of Transportation</a></div>
+                    <div class="pb-2"><a href="https://dut.udn.vn/" target="_blank">Da Nang University of Science and Technology</a></div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="fas fa-graduation-cap pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Google Scholar</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2"><a href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" target="_blank">Google Scholar</a></div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="fab fa-github pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Github</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2"><a href="https://github.com/your-github" target="_blank">Github</a></div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="pb-2 fw-bolder"><i class="fab fa-linkedin pe-2 text-muted" style="width:24px;opacity:0.85;"></i> LinkedIn</div>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="pb-2"><a href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" target="_blank">LinkedIn</a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="about">
-    <div class="about-section">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="h2 fw-light mb-4">About Me</h2>
-          <p>Hello! I’m HO TRONG TAI. I am passionate about research and technology development. I am skilled in problem-solving and innovative thinking. I enjoy creating impactful solutions that benefit society.</p>
-          <p>I can easily adapt to new environments and deliver high-quality work under tight deadlines.</p>
-        </div>
-        <div class="col-md-5 offset-lg-1">
-          <div class="row mt-2">
-            <h2 class="h2 fw-light mb-4">Bio</h2>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">hotai101200@gmail.com</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2">Korea</div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-university pe-2 text-muted" style="width:24px;opacity:0.85;"></i> University</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><a href="https://www.univ-lorraine.fr/" target="_blank">Université de Lorraine</a></div>
-              <div class="pb-2"><a href="https://www.ut.ac.kr/" target="_blank">Korea National University of Transportation</a></div>
-              <div class="pb-2"><a href="https://dut.udn.vn/" target="_blank">Da Nang University of Science and Technology</a></div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fas fa-graduation-cap pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Google Scholar</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><a href="https://scholar.google.com/citations?user=pujldigAAAAJ&hl=vi" target="_blank">Google Scholar</a></div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fab fa-github pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Github</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><a href="https://github.com/your-github" target="_blank">Github</a></div>
-            </div>
-            <div class="col-sm-5">
-              <div class="pb-2 fw-bolder"><i class="fab fa-linkedin pe-2 text-muted" style="width:24px;opacity:0.85;"></i> LinkedIn</div>
-            </div>
-            <div class="col-sm-7">
-              <div class="pb-2"><a href="https://www.linkedin.com/in/ho-trong-tai-a6790a1a7/" target="_blank">LinkedIn</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></div>
     </div>
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
